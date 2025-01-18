@@ -9,7 +9,11 @@ require('nvim-tree').setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    git_ignored = false,
+    custom = {
+      "^\\.git",
+    },
+    dotfiles = false,
   },
 })
 
