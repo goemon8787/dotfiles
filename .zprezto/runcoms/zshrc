@@ -1,0 +1,41 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+# Python alies
+alias python='python3'
+alias pip='pip3'
+
+# libpq
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# vim alias
+alias vi='nvim'
+alias vim='nvim'
+
+# ls alias
+alias ls='eza --icons=always'
+
+# cd
+eval "$(zoxide init zsh)"
+alias cd='z'
+
+# cat
+alias cat='bat -pP'
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# starship (final)
+eval "$(starship init zsh)"
+
